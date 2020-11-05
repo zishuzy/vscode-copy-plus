@@ -1,0 +1,114 @@
+{
+    "name": "copy-plus",
+    "displayName": "copy-plus",
+    "description": "copy file name",
+    "icon:": "images/icon.png",
+    "version": "0.0.1",
+    "publisher": "zishuzy",
+    "engines": {
+        "vscode": "^1.46.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:copy_plus.with_line_number.withoutPath",
+        "onCommand:copy_plus.with_line_number.withFullPath",
+        "onCommand:copy_plus.with_line_number.withRelativePath",
+        "onCommand:copy_plus.with_line_number.withFileName",
+        "onCommand:copy_plus.file_name"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "Copy Plus configuration",
+            "properties": {
+                "copy_plus.showSuccessMessage": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Show success message"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "copy_plus.with_line_number.withoutPath",
+                "title": "带行号的复制：不带路径"
+            },
+            {
+                "command": "copy_plus.with_line_number.withFileName",
+                "title": "带行号的复制：带文件名"
+            },
+            {
+                "command": "copy_plus.with_line_number.withRelativePath",
+                "title": "带行号的复制：带相对路径"
+            },
+            {
+                "command": "copy_plus.with_line_number.withFullPath",
+                "title": "带行号的复制：带绝对路径"
+            },
+            {
+                "command": "copy_plus.file_name",
+                "title": "复制文件名"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "copy_plus.with_line_number.withoutPath",
+                    "group": "9_cutcopypaste"
+                },
+                {
+                    "command": "copy_plus.with_line_number.withFileName",
+                    "group": "9_cutcopypaste"
+                },
+                {
+                    "command": "copy_plus.with_line_number.withRelativePath",
+                    "group": "9_cutcopypaste"
+                },
+                {
+                    "command": "copy_plus.with_line_number.withFullPath",
+                    "group": "9_cutcopypaste"
+                }
+            ],
+            "editor/title/context": [
+                {
+                    "command": "copy_plus.file_name",
+                    "group": "1_cutcopypaste"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "copy_plus.file_name",
+                    "group": "6_copypath"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "eslint src --ext ts",
+        "watch": "tsc -watch -p ./",
+        "pretest": "npm run compile && npm run lint",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.46.0",
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^14.0.27",
+        "eslint": "^7.6.0",
+        "@typescript-eslint/eslint-plugin": "^3.8.0",
+        "@typescript-eslint/parser": "^3.8.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.1.3",
+        "typescript": "^4.0.2",
+        "vscode-test": "^1.4.0"
+    },
+    "dependencies": {
+        "@types/copy-paste": "^1.1.30",
+        "copy-paste": "^1.3.0"
+    }
+}
