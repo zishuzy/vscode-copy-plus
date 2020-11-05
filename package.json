@@ -2,7 +2,7 @@
     "name": "copy-plus",
     "displayName": "copy-plus",
     "description": "copy file name",
-    "icon:": "images/icon.png",
+    "icon": "images/icon.png",
     "version": "0.0.1",
     "publisher": "zishuzy",
     "engines": {
