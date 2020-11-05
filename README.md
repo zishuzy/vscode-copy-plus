@@ -21,6 +21,10 @@ This project is a reconstruction based on [yassh/vscode-copy-with-line-numbers](
 
 Initialize Project.
 
+### 0.0.2
+
+Fix icon issues.
+
 -----------------------------------------------------------------------------------------------------------
 
 ## Working with Markdown
