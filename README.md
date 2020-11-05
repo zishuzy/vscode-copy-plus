@@ -5,7 +5,7 @@ Copy file name. Copy selected lines with line number (and file path).
 
 ## Features
 
-![example](https://raw.githubusercontent.com/zishu-zy/cpp-include-complete/master/images/example_0.gif)
+![example](https://raw.githubusercontent.com/zishu-zy/vscode-copy-plus/master/images/demo_0.gif)
 
 ## Extension Settings
 
