@@ -87,13 +87,9 @@ function copyWithLineNumbers(option?: any) {
     });
 }
 
-function copyFileName() {
-    const editor = vscode.window.activeTextEditor;
-    if (!editor) {
-        vscode.window.showInformationMessage("No editor is active");
-        return;
-    }
-    const fileName = path.basename(editor.document.fileName);
+function copyFileName(uri: vscode.Uri) {
+    const fileName = path.basename(uri.fsPath);
+    // console.log(fileName);
 
     copy(fileName, () => {
         const showSuccessMessage = vscode.workspace
@@ -104,19 +100,19 @@ function copyFileName() {
 }
 
 export const commands = {
-    [COPY_WITH_LINE_NUMBERS_WITHOUT_PATH]: () => {
+    [COPY_WITH_LINE_NUMBERS_WITHOUT_PATH]: (uri: vscode.Uri) => {
         copyWithLineNumbers();
     },
-    [COPY_WITH_LINE_NUMBERS_WITH_FULL_PATH]: () => {
+    [COPY_WITH_LINE_NUMBERS_WITH_FULL_PATH]: (uri: vscode.Uri) => {
         copyWithLineNumbers(OPTION_WITH_FULL_PATH);
     },
-    [COPY_WITH_LINE_NUMBERS_WITH_RELATIVE_PATH]: () => {
+    [COPY_WITH_LINE_NUMBERS_WITH_RELATIVE_PATH]: (uri: vscode.Uri) => {
         copyWithLineNumbers(OPTION_WITH_RELATIVE_PATH);
     },
-    [COPY_WITH_LINE_NUMBERS_WITH_FILE_NAME]: () => {
+    [COPY_WITH_LINE_NUMBERS_WITH_FILE_NAME]: (uri: vscode.Uri) => {
         copyWithLineNumbers(OPTION_WITH_FILE_NAME);
     },
-    [COPY_FILE_NAME]: () => {
-        copyFileName();
+    [COPY_FILE_NAME]: (uri: vscode.Uri) => {
+        copyFileName(uri);
     },
 };

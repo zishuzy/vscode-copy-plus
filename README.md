@@ -25,6 +25,10 @@ Initialize Project.
 
 Fix icon issues.
 
+### 0.0.3
+
+Fix file name issues.
+
 -----------------------------------------------------------------------------------------------------------
 
 ## Working with Markdown
