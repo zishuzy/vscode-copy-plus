@@ -11,7 +11,12 @@ Copy file name. Copy selected lines with line number (and file path).
 
 This extension contributes the following settings:
 
-* `copy_plus.showSuccessMessage`:  Show success message.
+* `copy_plus.showSuccessMessage`: Show success message.
+* `copy_plus.with_line_number.withoutPath.showMenu`: Specifies whether 'Copy with line numbers: without path' commands are displayed on the context menu.
+* `copy_plus.with_line_number.withFullPath.showMenu`: Specifies whether 'Copy with line numbers: with full path' commands are displayed on the context menu.
+* `copy_plus.with_line_number.withRelativePath.showMenu`: Specifies whether 'Copy with line numbers: with relative path' commands are displayed on the context menu.
+* `copy_plus.with_line_number.withFileName.showMenu`: Specifies whether 'Copy with line numbers: with file name' commands are displayed on the context menu.
+* `copy_plus.file_name.showMenu`:  Specifies whether 'Copy file name' commands are displayed on the context menu.
 
 ## Release Notes
 
@@ -21,13 +26,9 @@ This project is a reconstruction based on [yassh/vscode-copy-with-line-numbers](
 
 Initialize Project.
 
-### 0.0.2
+### 0.0.5
 
-Fix icon issues.
-
-### 0.0.3
-
-Fix file name issues.
+Add Configuration.
 
 -----------------------------------------------------------------------------------------------------------
 

@@ -3,7 +3,7 @@
     "displayName": "copy-plus",
     "description": "copy file name",
     "icon": "images/icon.png",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "publisher": "zishuzy",
     "engines": {
         "vscode": "^1.46.0"
@@ -31,61 +31,92 @@
                 "copy_plus.showSuccessMessage": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Show success message"
+                    "description": "%copy_plus.configuration.showSuccessMessage%"
+                },
+                "copy_plus.with_line_number.withoutPath.showMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%copy_plus.configuration.with_line_number.withoutPath.showMenu%"
+                },
+                "copy_plus.with_line_number.withFullPath.showMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%copy_plus.configuration.with_line_number.withFullPath.showMenu%"
+                },
+                "copy_plus.with_line_number.withRelativePath.showMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%copy_plus.configuration.with_line_number.withRelativePath.showMenu%"
+                },
+                "copy_plus.with_line_number.withFileName.showMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%copy_plus.configuration.with_line_number.withFileName.showMenu%"
+                },
+                "copy_plus.file_name.showMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%copy_plus.configuration.file_name.showMenu%"
                 }
             }
         },
         "commands": [
             {
                 "command": "copy_plus.with_line_number.withoutPath",
-                "title": "带行号的复制：不带路径"
+                "title": "%copy_plus.commands.with_line_number.withoutPath%"
             },
             {
                 "command": "copy_plus.with_line_number.withFileName",
-                "title": "带行号的复制：带文件名"
+                "title": "%copy_plus.commands.with_line_number.withFileName%"
             },
             {
                 "command": "copy_plus.with_line_number.withRelativePath",
-                "title": "带行号的复制：带相对路径"
+                "title": "%copy_plus.commands.with_line_number.withRelativePath%"
             },
             {
                 "command": "copy_plus.with_line_number.withFullPath",
-                "title": "带行号的复制：带绝对路径"
+                "title": "%copy_plus.commands.with_line_number.withFullPath%"
             },
             {
                 "command": "copy_plus.file_name",
-                "title": "复制文件名"
+                "title": "%copy_plus.commands.file_name%"
             }
         ],
         "menus": {
             "editor/context": [
                 {
                     "command": "copy_plus.with_line_number.withoutPath",
-                    "group": "9_cutcopypaste"
+                    "group": "9_cutcopypaste",
+                    "when": "config.copy_plus.with_line_number.withoutPath.showMenu"
                 },
                 {
                     "command": "copy_plus.with_line_number.withFileName",
-                    "group": "9_cutcopypaste"
+                    "group": "9_cutcopypaste",
+                    "when": "config.copy_plus.with_line_number.withFileName.showMenu"
                 },
                 {
                     "command": "copy_plus.with_line_number.withRelativePath",
-                    "group": "9_cutcopypaste"
+                    "group": "9_cutcopypaste",
+                    "when": "config.copy_plus.with_line_number.withRelativePath.showMenu"
                 },
                 {
                     "command": "copy_plus.with_line_number.withFullPath",
-                    "group": "9_cutcopypaste"
+                    "group": "9_cutcopypaste",
+                    "when": "config.copy_plus.with_line_number.withFullPath.showMenu"
                 }
             ],
             "editor/title/context": [
                 {
                     "command": "copy_plus.file_name",
-                    "group": "1_cutcopypaste"
+                    "group": "1_cutcopypaste",
+                    "when": "config.copy_plus.file_name.showMenu"
                 }
             ],
             "explorer/context": [
                 {
                     "command": "copy_plus.file_name",
-                    "group": "6_copypath"
+                    "group": "6_copypath",
+                    "when": "config.copy_plus.file_name.showMenu"
                 }
             ]
         }

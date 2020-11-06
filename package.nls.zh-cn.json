@@ -1,0 +1,13 @@
+{
+    "copy_plus.commands.with_line_number.withoutPath": "带行号复制：不带路径",
+    "copy_plus.commands.with_line_number.withFileName": "带行号复制：带文件名",
+    "copy_plus.commands.with_line_number.withRelativePath": "带行号复制：带相对路径",
+    "copy_plus.commands.with_line_number.withFullPath": "带行号复制：带全路径",
+    "copy_plus.commands.file_name": "复制文件名",
+    "copy_plus.configuration.showSuccessMessage": "显示成功消息",
+    "copy_plus.configuration.with_line_number.withoutPath.showMenu": "'带行号复制：不带路径'命令是否显示在上下文菜单上",
+    "copy_plus.configuration.with_line_number.withFileName.showMenu": "'带行号复制：带文件名'命令是否显示在上下文菜单上",
+    "copy_plus.configuration.with_line_number.withRelativePath.showMenu": "'带行号复制：带相对路径'命令是否显示在上下文菜单上",
+    "copy_plus.configuration.with_line_number.withFullPath.showMenu": "'带行号复制：带全路径'命令是否显示在上下文菜单上",
+    "copy_plus.configuration.file_name.showMenu": "'复制文件名'命令是否显示在上下文菜单上"
+}
