@@ -1,13 +1,13 @@
 {
     "copy_plus.commands.with_line_number.withoutPath": "Copy with line numbers: without path",
     "copy_plus.commands.with_line_number.withFileName": "Copy with line numbers: with file name",
-    "copy_plus.commands.with_line_number.withRelativePath": "Copy with line numbers: without relative path",
-    "copy_plus.commands.with_line_number.withFullPath": "Copy with line numbers: without full path",
+    "copy_plus.commands.with_line_number.withRelativePath": "Copy with line numbers: with relative path",
+    "copy_plus.commands.with_line_number.withFullPath": "Copy with line numbers: with full path",
     "copy_plus.commands.file_name": "Copy file name",
     "copy_plus.configuration.showSuccessMessage": "Show success message",
     "copy_plus.configuration.with_line_number.withoutPath.showMenu": "Specifies whether 'Copy with line numbers: without path' commands are displayed on the context menu",
     "copy_plus.configuration.with_line_number.withFileName.showMenu": "Specifies whether 'Copy with line numbers: with file name' commands are displayed on the context menu",
-    "copy_plus.configuration.with_line_number.withRelativePath.showMenu": "Specifies whether 'Copy with line numbers: without relative path' commands are displayed on the context menu",
-    "copy_plus.configuration.with_line_number.withFullPath.showMenu": "Specifies whether 'Copy with line numbers: without full path' commands are displayed on the context menu",
+    "copy_plus.configuration.with_line_number.withRelativePath.showMenu": "Specifies whether 'Copy with line numbers: with relative path' commands are displayed on the context menu",
+    "copy_plus.configuration.with_line_number.withFullPath.showMenu": "Specifies whether 'Copy with line numbers: with full path' commands are displayed on the context menu",
     "copy_plus.configuration.file_name.showMenu": "Specifies whether 'Copy file name' commands are displayed on the context menu"
 }

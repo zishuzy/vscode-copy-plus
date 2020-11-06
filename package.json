@@ -3,7 +3,7 @@
     "displayName": "copy-plus",
     "description": "copy file name",
     "icon": "images/icon.png",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "publisher": "zishuzy",
     "engines": {
         "vscode": "^1.46.0"
