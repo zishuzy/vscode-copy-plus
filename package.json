@@ -3,7 +3,7 @@
     "displayName": "copy-plus",
     "description": "copy file name",
     "icon": "images/icon.png",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "publisher": "zishuzy",
     "engines": {
         "vscode": "^1.46.0"
@@ -20,6 +20,7 @@
         "onCommand:copy_plus.with_line_number.withFullPath",
         "onCommand:copy_plus.with_line_number.withRelativePath",
         "onCommand:copy_plus.with_line_number.withFileName",
+        "onCommand:copy_plus.with_line_number.withoutContent",
         "onCommand:copy_plus.file_name"
     ],
     "main": "./out/extension.js",
@@ -53,6 +54,11 @@
                     "default": true,
                     "description": "%copy_plus.configuration.with_line_number.withFileName.showMenu%"
                 },
+                "copy_plus.with_line_number.withoutContent.showMenu": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "%copy_plus.configuration.with_line_number.withoutContent.showMenu%"
+                },
                 "copy_plus.file_name.showMenu": {
                     "type": "boolean",
                     "default": true,
@@ -76,6 +82,10 @@
             {
                 "command": "copy_plus.with_line_number.withFullPath",
                 "title": "%copy_plus.commands.with_line_number.withFullPath%"
+            },
+            {
+                "command": "copy_plus.with_line_number.withoutContent",
+                "title": "%copy_plus.commands.with_line_number.withoutContent%"
             },
             {
                 "command": "copy_plus.file_name",
@@ -103,6 +113,11 @@
                     "command": "copy_plus.with_line_number.withFullPath",
                     "group": "9_cutcopypaste",
                     "when": "config.copy_plus.with_line_number.withFullPath.showMenu"
+                },
+                {
+                    "command": "copy_plus.with_line_number.withoutContent",
+                    "group": "9_cutcopypaste",
+                    "when": "config.copy_plus.with_line_number.withoutContent.showMenu"
                 }
             ],
             "editor/title/context": [

@@ -10,6 +10,7 @@ const COPY_WITH_LINE_NUMBERS_WITHOUT_PATH = COPY_WITH_LINE_NUMBERS + ".withoutPa
 const COPY_WITH_LINE_NUMBERS_WITH_FULL_PATH = COPY_WITH_LINE_NUMBERS + ".withFullPath";
 const COPY_WITH_LINE_NUMBERS_WITH_RELATIVE_PATH = COPY_WITH_LINE_NUMBERS + ".withRelativePath";
 const COPY_WITH_LINE_NUMBERS_WITH_FILE_NAME = COPY_WITH_LINE_NUMBERS + ".withFileName";
+const COPY_WITH_LINE_NUMBERS_WITHOUT_CONTENT = COPY_WITH_LINE_NUMBERS + ".withoutContent";
 const COPY_FILE_NAME = "copy_plus.file_name";
 
 const OPTION_WITH_FULL_PATH = "withFullPath";
@@ -21,7 +22,7 @@ const MULTI_SELECTION_SEPARATOR = "---";
 function leftPad(val: any, count: number, pad: any = " "): string {
     let strRet: string = "";
     let strVal: string = "" + val;
-    console.log(strVal.length, count);
+    // console.log(strVal.length, count);
     if (count > strVal.length) {
         let nPadLen: number = count - strVal.length;
         let strPad: string = new Array(nPadLen + 1).join(pad);
@@ -87,6 +88,25 @@ function copyWithLineNumbers(option?: any) {
     });
 }
 
+function copyFileNameLine(uri: vscode.Uri) {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+        vscode.window.showInformationMessage("No editor is active");
+        return;
+    }
+    const number = editor.selection.start.line.toString();
+    const fileName = path.basename(uri.fsPath);
+
+    let str = `${fileName} +${number}`;
+
+    copy(str, () => {
+        const showSuccessMessage = vscode.workspace
+            .getConfiguration("copy_plus")
+            .get("showSuccessMessage");
+        if (showSuccessMessage) vscode.window.showInformationMessage("Copied!");
+    });
+}
+
 function copyFileName(uri: vscode.Uri) {
     const fileName = path.basename(uri.fsPath);
     // console.log(fileName);
@@ -111,6 +131,9 @@ export const commands = {
     },
     [COPY_WITH_LINE_NUMBERS_WITH_FILE_NAME]: (uri: vscode.Uri) => {
         copyWithLineNumbers(OPTION_WITH_FILE_NAME);
+    },
+    [COPY_WITH_LINE_NUMBERS_WITHOUT_CONTENT]: (uri: vscode.Uri) => {
+        copyFileNameLine(uri);
     },
     [COPY_FILE_NAME]: (uri: vscode.Uri) => {
         copyFileName(uri);
