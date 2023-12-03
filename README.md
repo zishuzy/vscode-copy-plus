@@ -1,4 +1,3 @@
-
 # copy-plus README
 
 Copy file name. Copy selected lines with line number (and file path).
@@ -11,12 +10,14 @@ Copy file name. Copy selected lines with line number (and file path).
 
 This extension contributes the following settings:
 
-* `copy_plus.showSuccessMessage`: Show success message.
-* `copy_plus.with_line_number.withoutPath.showMenu`: Specifies whether 'Copy with line numbers: without path' commands are displayed on the context menu.
-* `copy_plus.with_line_number.withFullPath.showMenu`: Specifies whether 'Copy with line numbers: with full path' commands are displayed on the context menu.
-* `copy_plus.with_line_number.withRelativePath.showMenu`: Specifies whether 'Copy with line numbers: with relative path' commands are displayed on the context menu.
-* `copy_plus.with_line_number.withFileName.showMenu`: Specifies whether 'Copy with line numbers: with file name' commands are displayed on the context menu.
-* `copy_plus.file_name.showMenu`:  Specifies whether 'Copy file name' commands are displayed on the context menu.
+-   `copy_plus.showSuccessMessage`: Show success message.
+-   `copy_plus.with_line_number.withoutPath.showMenu`: Specifies whether 'Copy with line numbers: without path' commands are displayed on the context menu.
+-   `copy_plus.with_line_number.withFullPath.showMenu`: Specifies whether 'Copy with line numbers: with full path' commands are displayed on the context menu.
+-   `copy_plus.with_line_number.withRelativePath.showMenu`: Specifies whether 'Copy with line numbers: with relative path' commands are displayed on the context menu.
+-   `copy_plus.with_line_number.withFileName.showMenu`: Specifies whether 'Copy with line numbers: with file name' commands are displayed on the context menu.
+-   `copy_plus.with_line_number.withoutContent.showMenu`: Specifies whether 'Copy with line numbers: without content' commands are displayed on the context menu.
+-   `copy_plus.with_line_number.withoutContent.mode`: Specifies 'Copy with line numbers: without content' mode.
+-   `copy_plus.file_name.showMenu`: Specifies whether 'Copy file name' commands are displayed on the context menu.
 
 ## Release Notes
 
@@ -33,3 +34,7 @@ Add Configuration.
 ### 0.0.9
 
 Add Without Content.
+
+### 0.0.10
+
+Add Mode for Without Content.

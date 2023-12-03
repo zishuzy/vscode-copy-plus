@@ -11,5 +11,6 @@
     "copy_plus.configuration.with_line_number.withRelativePath.showMenu": "'带行号复制：带相对路径'命令是否显示在上下文菜单上",
     "copy_plus.configuration.with_line_number.withFullPath.showMenu": "'带行号复制：带全路径'命令是否显示在上下文菜单上",
     "copy_plus.configuration.with_line_number.withoutContent.showMenu": "'带行号复制：不带内容'命令是否显示在上下文菜单上",
+    "copy_plus.configuration.with_line_number.withoutContent.mode": "'带行号复制：不带内容'模式",
     "copy_plus.configuration.file_name.showMenu": "'复制文件名'命令是否显示在上下文菜单上"
 }

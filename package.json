@@ -3,10 +3,10 @@
     "displayName": "copy-plus",
     "description": "copy file name",
     "icon": "images/icon.png",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "publisher": "zishuzy",
     "engines": {
-        "vscode": "^1.46.0"
+        "vscode": "^1.75.0"
     },
     "repository": {
         "type": "git",
@@ -15,14 +15,7 @@
     "categories": [
         "Other"
     ],
-    "activationEvents": [
-        "onCommand:copy_plus.with_line_number.withoutPath",
-        "onCommand:copy_plus.with_line_number.withFullPath",
-        "onCommand:copy_plus.with_line_number.withRelativePath",
-        "onCommand:copy_plus.with_line_number.withFileName",
-        "onCommand:copy_plus.with_line_number.withoutContent",
-        "onCommand:copy_plus.file_name"
-    ],
+    "activationEvents": [],
     "main": "./out/extension.js",
     "contributes": {
         "configuration": {
@@ -58,6 +51,15 @@
                     "type": "boolean",
                     "default": true,
                     "description": "%copy_plus.configuration.with_line_number.withoutContent.showMenu%"
+                },
+                "copy_plus.with_line_number.withoutContent.mode": {
+                    "type": "string",
+                    "default": false,
+                    "enum": [
+                        "vim",
+                        "vscode"
+                    ],
+                    "description": "%copy_plus.configuration.with_line_number.withoutContent.mode%"
                 },
                 "copy_plus.file_name.showMenu": {
                     "type": "boolean",

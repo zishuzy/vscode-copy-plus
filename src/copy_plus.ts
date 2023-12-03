@@ -94,10 +94,15 @@ function copyFileNameLine(uri: vscode.Uri) {
         vscode.window.showInformationMessage("No editor is active");
         return;
     }
-    const number = editor.selection.start.line.toString();
+    const number = editor.selection.start.line + 1;
     const fileName = path.basename(uri.fsPath);
+    const copyMode = vscode.workspace
+        .getConfiguration("copy_plus")
+        .get("with_line_number.withoutContent.mode");
 
     let str = `${fileName} +${number}`;
+
+    if (copyMode == "vscode") str = `${fileName}:${number}`;
 
     copy(str, () => {
         const showSuccessMessage = vscode.workspace
